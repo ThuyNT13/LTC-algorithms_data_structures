@@ -7,7 +7,7 @@ List of [Matchers](https://github.com/JamieMason/Jasmine-Matchers )
 A few tutorials:
 
 - [Jasmine – JavaScript Unit Testing Tutorial with Examples](http://howtodoinjava.com/scripting/javascript/jasmine-javascript-unit-testing-tutorial/) is a nice overview of how to start using Jasmine and mentions how to disable certain specs.
-- [Testing Your JavaScript with Jasmine](https://code.tutsplus.com/tutorials/testing-your-javascript-with-jasmine--net-21229) has some buggy sample tests -- as it's from 2011 -- but includes a sample test for throwing an exception.
+- [Testing Your JavaScript with Jasmine](https://code.tutsplus.com/tutorials/testing-your-javascript-with-jasmine--net-21229) more examples and includes a sample test for throwing an exception.
 - [Using Jasmine for JavaScript Testing ](http://blog.codeship.com/jasmine-testing-javascript/) short video tutorial
 - [Unit Testing Best Practices in AngularJS](http://andyshora.com/unit-testing-best-practices-angularjs.html) has nice samples on _unit_ and _integration_ testing as well as discusses when to use them.
 
@@ -15,33 +15,31 @@ A few tutorials:
 
 ## Installation of Jasmine 2.6.1 and directories
 
-In main directory, create sub-directories *lib*, *spec* and *src*.
+In main directory, create sub-directories *spec* and *src*.
 
 ```bash
-mkdir lib spec src
+mkdir spec src
 ```
 
-Navigate into *lib* directory and then clone this repo.
+Clone this repo:
 
 ```bash
-cd lib
 git clone https://github.com/ThuyNT13/jasmine-2.6.1.git
 ```
 
-Move *SpecTestRunner.html*, *specTest.js* and *specTestSpec.js*:
+Move *SpecTestRunner.html*, *SpecTest.js* and *SpecTestSpec.js*:
 
 ```bash
-mv jasmine-2.6.1/SpecTest.js ../src/
+mv jasmine-2.6.1/SpecTest.js src/
 ```
 
 ```bash
-mv jasmine-2.6.1/Spec* ../spec/
+mv jasmine-2.6.1/Spec* spec/
 ```
 
-Navigate out from *lib* and open test runner file in the browser to make sure it works.
+Run test runner file in the browser to make sure it works.
 
 ```bash
-cd ..
 open spec/SpecTestRunner.html
 ```
 If the test runs and you see:
@@ -55,3 +53,13 @@ If the test runs and you see:
 ```
 
  ...you're good.
+
+## Removing Git from nested Git repo
+
+Git is going to have difficulties tracking a Git repo nested within another Git repo. So removing it, for now:
+
+```bash
+rm -i jasmine-2.6.1/.git
+```
+
+The goal is to eventually create a [Submodule](https://git-scm.com/book/en/v2/Git-Tools-Submodules) for the nested Git repo, allowing the commits to be separate.
