@@ -1,7 +1,17 @@
-# LTC-algorithms_data_structures
+# LTC algorithms data structures
 Learn Teach Code algorithms and data structures study sessions and interview practice group
 
 [Wiki page](https://github.com/ThuyNT13/LTC-algorithms_data_structures/wiki)
+
+### Run tests
+
+Run following code on command line from the root directory, replacing `<testName>` with the test you are trying to run:
+
+```bash
+open tests/<testName>Runner.html
+```
+
+This should open in your browser the results of your test. If you're on Linux, use `xdg-open`.
 
 ## Support
 
