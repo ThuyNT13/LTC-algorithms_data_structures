@@ -12,9 +12,12 @@ describe('getMaxProfit()', function() {
       var array = [9, 8, 7, 7, 7, 6];
       expect(getMaxProfit(array)).toEqual(0);
     });
-    it('0 for [12, 12, 10, 9, 3]', function() {
+    it('0 for [12, 12, 11, 9, 3]', function() {
       var array = [12, 12, 11, 9, 3];
       expect(getMaxProfit(array)).toEqual(0);
+    });
+    it('returns loss for 2 indices', function() {
+      expect(getMaxProfit([4,0])).toEqual(-4);
     });
   });
 
@@ -31,13 +34,15 @@ describe('getMaxProfit()', function() {
       var array = [9, 7, 8, 18, 3, 15];
       expect(getMaxProfit(array)).toEqual(12);
     });
+    it('returns gain for 2 indices', function() {
+      expect(getMaxProfit([0,4])).toEqual(4);
+    });
   });
 
   describe('throws an error when there are less than 2 prices.', function() {
     it('throws Error for [1]', function() {
-      var array = [1];
       expect( function() {
-        getMaxProfit(array);
+        getMaxProfit([1]);
       } ).toThrow(new Error("At least 2 prices needed."));
     });
   });
