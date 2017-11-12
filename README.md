@@ -3,6 +3,10 @@ Learn Teach Code algorithms and data structures study sessions and interview pra
 
 [Wiki page](https://github.com/ThuyNT13/LTC-algorithms_data_structures/wiki)
 
+## Challenges
+
+1. [Stock Market](src/stockMarket.js)
+
 ### Run tests
 
 Run following code on command line from the root directory, replacing `<testName>` with the test you are trying to run:
