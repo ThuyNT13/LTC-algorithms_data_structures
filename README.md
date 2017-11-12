@@ -5,10 +5,10 @@ Learn Teach Code algorithms and data structures study sessions and interview pra
 
 ### Run tests
 
-Run following code on command line from the root directory, replacing `<TestName>` with the test you are trying to run:
+Run following code on command line from the root directory, replacing `<testName>` with the test you are trying to run:
 
 ```bash
-open tests/<TestName>Runner.html
+open tests/<testName>Runner.html
 ```
 
 This should open in your browser the results of your test. If you're on Linux, use `xdg-open`.
