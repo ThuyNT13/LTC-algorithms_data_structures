@@ -8,6 +8,10 @@ describe('getMaxProfit()', function() {
       var array = [10, 9, 8, 7, 6, 4];
       expect(getMaxProfit(array)).toEqual(-1);
     });
+    it('-1 for [10, 8, 6, 5]', function() {
+      var array = [10, 8, 6, 5];
+      expect(getMaxProfit(array)).toEqual(-1);
+    });
     it('0 for [9, 8, 7, 7, 7, 6]', function() {
       var array = [9, 8, 7, 7, 7, 6];
       expect(getMaxProfit(array)).toEqual(0);
